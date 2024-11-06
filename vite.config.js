@@ -17,9 +17,6 @@ export default defineConfig({
             },
         }),
     ],
-    server: {
-        https: true,  // Fuerza el uso de HTTPS en el servidor de desarrollo
-    },
     build: {
         sourcemap: false,  // Esto desactiva los sourcemaps en producción
         rollupOptions: {
