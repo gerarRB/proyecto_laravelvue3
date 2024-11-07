@@ -17,9 +17,6 @@ export default defineConfig({
             },
         }),
     ],
-    server: {
-        https: true, // Esto solo aplica en desarrollo, pero debe estar asegurado
-    },
     build: {
         sourcemap: false,
         rollupOptions: {
@@ -30,6 +27,5 @@ export default defineConfig({
             },
         },
     },
-    base: '/', // Eliminar cualquier base personalizada, esto ayuda a asegurar que los archivos se sirvan desde la raíz
 });
 
