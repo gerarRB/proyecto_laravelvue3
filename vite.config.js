@@ -17,15 +17,19 @@ export default defineConfig({
             },
         }),
     ],
+    server: {
+        https: true, // Esto solo aplica en desarrollo, pero debe estar asegurado
+    },
     build: {
-        sourcemap: false,  // Esto desactiva los sourcemaps en producción
+        sourcemap: false,
         rollupOptions: {
             output: {
                 manualChunks: {
-                    // Separa pdfMake y vfs_fonts para que se empaqueten correctamente
                     pdfmake: ['pdfmake/build/pdfmake', 'pdfmake/build/vfs_fonts'],
                 },
             },
         },
     },
+    base: '/', // Eliminar cualquier base personalizada, esto ayuda a asegurar que los archivos se sirvan desde la raíz
 });
+
